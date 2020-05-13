@@ -1,0 +1,311 @@
+\documentclass[11pt,article,oneside]{memoir}
+\usepackage{paper/.pandoc/org-preamble-xelatex}
+\usepackage{lscape}
+\usepackage{flafter}
+
+\usepackage{longtable}
+
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{cslreferences}%
+  {\setlength{\parindent}{0pt}%
+  \everypar{\setlength{\hangindent}{\cslhangindent} \setlength{\parskip}{6pt}}\ignorespaces}%
+  {\par}
+
+
+\title{\bigskip A Computational Approach for Defining Metropolitan
+Employment Centers: Polycentric Urban Form \& the p-Regions Problem}
+
+
+\author{\large Elijah
+Knaap\vspace{0.05in} \newline\normalsize\emph{University of
+California-Riverside} \newline\footnotesize \url{knaap@ucr.edu}\vspace*{0.2in}\newline  \and \large Ran
+Wei\vspace{0.05in} \newline\normalsize\emph{University of
+California-Riverside} \newline\footnotesize \url{ranwei@ucr.edu}\vspace*{0.2in}\newline  \and \large Sergio
+Rey\vspace{0.05in} \newline\normalsize\emph{University of
+California-Riverside} \newline\footnotesize \url{serge.rey@ucr.edu}\vspace*{0.2in}\newline }
+
+
+\date{}
+
+
+\begin{document}
+\setkeys{Gin}{width=1\textwidth}
+\setromanfont[Mapping=tex-text]{Spectral}
+\setsansfont[Mapping=tex-text]{Roboto}
+\setmonofont[Mapping=tex-text,Scale=0.8]{Oxygen Mono}
+\chapterstyle{article-4}
+\pagestyle{kjh}
+
+\published{January 2020.}
+
+\maketitle
+
+
+
+\begin{abstract}\vspace*{-2cm}
+
+
+\noindent Recent work has suggested a departure from the familiar
+monocentric city model popularized into a polycentric urban form defined
+by multiple employment centers that form along regional transportation
+corridors. Importantly, these studies have demonstrated the ways in
+which the forces of localization and agglomeration can work together to
+define a pallette of well-defined employment centers that may specialize
+in certain industries but nonetheless increase the economic performance
+of firms that choose to locate inside Despite the important advances in
+polycentric research, we know little about the properties of these
+employment centers across the range of metropolitan regions, since the
+existing research has been constrained to a handful of large
+metropolitan regions. Thus, in this paper, we employ a novel
+modification of the max-p algorithm by extending it to incorporate two
+threshold constraints (satisfying both total employment and density
+thereof) and applying our method to every metropolitan region in the
+United States. By leveraging the max-p algorithm we uncover the
+polycentric urban form in each of America's metropolitan regions and
+describe the size, shape, and composition of the resulting employment
+centers. Using these results, we describe how the identified employment
+centers can be leveraged as the basis of economic development,
+sustainability, and equitable transportation planning.
+
+\end{abstract}
+
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+Over the last several decades, American metropolitan regions have borne
+witness to major economic restructuring as the American economy has
+shifted from manufacturing and XXX to a service and knowledge-based
+economy. Concurrent with these trends is a less severe but equally
+important restructuring of the \emph{spatial structure} of American
+employment, as certain industries have begin gravitating toward more
+suburban locations to be nearer to their employment bases, whereas other
+industries are flocking to inner cities. These trends suggest a critical
+reckoning for the study of agglomeration economies that provides the
+foundation of modern urban economics and regional science. Recent work
+has suggested a departure from the familiar monocentric city model
+popularized by Muth (1969) into a polycentric urban form defined by
+multiple employment centers that form along regional transportation
+corridors (Knaap et al. 2016; Giuliano and Small 1991). Importantly,
+these studies have demonstrated the ways in which the forces of
+localization and agglomeration can work together to define a pallette of
+well-defined employment centers that may specialize in certain
+industries but nonetheless increase the economic performance of firms
+that choose to locate inside. Furthermore, more recent evidence has
+demonstrated that these employment centers also provide a range of
+benefits for achieving global sustainability such as reduced
+transportation costs and lower trip durations.
+
+Despite the important advances in polycentric research, we know little
+about the properties of these employment centers across the range of
+metropolitan regions, since the existing research has been constrained
+to a handful of large metropolitan regions. Existing work often adopts a
+relatively simple definition of an employment center: a set of
+contiguous spatial units whose combined total employment and employment
+density meet some pre-defined thresholds. But this process of
+identifying employment centers is prohibitively laborious, since it
+requires the tedious and iterative process of aggregating spatial units,
+testing whether each constraint is met, then re-aggregating and testing
+again. Luckily, over the last decade, a family of ``regionalization''
+algorithms has grown from the tradition of spatial optimization which
+excels at identifying the maximum number of \emph{p}-distinct regions
+(Duque, Church, and Middleton 2011) in a spatial dataset. Thus, in this
+paper, we employ a novel modification of the max-p algorithm by
+extending it to incorporate two threshold constraints (satisfying both
+total employment and density thereof) and applying our method to every
+metropolitan region in the United States (Duque, Anselin, and Rey 2012)
+
+As a result, we identify a set of American employment centers at a
+national scale. By leveraging the max-p algorithm we uncover the
+polycentric urban form in each of America's metropolitan regions and
+describe the size, shape, and composition of the resulting employment
+centers. Using these results, we describe how the identified employment
+centers can be leveraged as the basis of economic development,
+sustainability, and equitable transportation planning.
+
+\hypertarget{spatial-structure-as-a-vehicle-for-urban-policy}{%
+\section{Spatial Structure as a Vehicle for Urban
+Policy}\label{spatial-structure-as-a-vehicle-for-urban-policy}}
+
+Large portions of urban planning, regional science, and economic
+geography research are devoted to understanding how spatial patterns
+like development intensity and the separation of land uses influence
+social and economic activities. Part of this work is focused on patterns
+like urban sprawl, and the effect they have on GHG emissions, housing
+prices, and social welfare. Another--much older--portion of this work
+focuses on measuring form to understand the optimal location of
+resources to maximize economic output
+
+Regardless of the perspective, the literature from across the many
+disciplines makes clear that urban policy measures are often designed to
+reshape urban form explicitly, or to make the most of existing form to
+capitalize on the social, economic, and environmental benefits.
+
+\hypertarget{the-monocentric-model}{%
+\subsection{The Monocentric Model}\label{the-monocentric-model}}
+
+von thunen, muth, mills, brueckner; agglomeration as a foundation of
+urban economic and economic development policy.
+
+public transportation and transportation efficiency more generally
+
+\hypertarget{polycentric-urban-development}{%
+\subsection{Polycentric Urban
+Development}\label{polycentric-urban-development}}
+
+More recently, especially in newer cities like LA, polycentrism rather
+than monocentrism is the norm. Giuliano \& small show this works well
+for economic development. On the other hand public transportation is
+notoriously difficult in LA because its so spread out. (More rencnt
+eamples of it working??)
+
+In DC, and Baltimore, polycentrism seems to work for both economic
+development \emph{and} transportation, with cascading environmental
+benefits as a result Knaap et al. (2016)
+
+So polycentrism is not only an important and useful model for
+encouraging both growth and sustainability, but it also may be emerging
+as the dominant urban form in the US and across the world.
+
+\hypertarget{urban-spatial-structure-as-a-p-regions-problem}{%
+\section{\texorpdfstring{Urban Spatial Structure as a \emph{p}-Regions
+problem}{Urban Spatial Structure as a p-Regions problem}}\label{urban-spatial-structure-as-a-p-regions-problem}}
+
+the p-regions problem Duque, Church, and Middleton (2011)
+
+max-p is a particular version of the problem Duque, Anselin, and Rey
+(2012)
+
+recently a number of extensions to max-p have been explored She, Duque,
+and Ye (2017) Duque, Vélez-Gallego, and Echeverri (2018)
+
+Li, Church, and Goodchild (2014) the p-compact-regions problem for urban
+economic modeling
+
+Here, we propose a novel extension of the max-p regions \emph{idea}. In
+this case, the modification is
+
+\hypertarget{modifying-max-p-to-identify-urban-polycenters}{%
+\section{Modifying Max-p to Identify Urban
+Polycenters}\label{modifying-max-p-to-identify-urban-polycenters}}
+
+In the original formulation of the p-regions problem, a study area is
+comprised of a set of polygons that must be aggregated to form the
+largest number of aggregate regions, subject to certain constraints.
+Here, every unit in the study area should be assigned to a particular
+region until the study space is partitioned fully. In the case of
+identifying employment centers, however, the original p-regions
+formulation requires two important extensions. First it is not
+appropriate to partition the entire study space
+
+In the classic max-p problem, regions are identified by (1) satisfying a
+threshold constraint, and (2) optimizing some objective function, which
+is typically multivariate similarity among the enclave's attributes.
+When identifying employment centers, however, this objective function
+assumes the form of a second constraint; here the alogirthm must satisfy
+the total employment constraint within the region, but also must satisfy
+an employment density criterion.
+
+If we take employment density as the objective to optimize
+
+\hypertarget{polycentric-urban-form-in-american-metropolitan-regions}{%
+\section{Polycentric Urban Form in American Metropolitan
+Regions}\label{polycentric-urban-form-in-american-metropolitan-regions}}
+
+\hypertarget{quantity-shape-and-configuration}{%
+\subsection{Quantity, Shape, and
+Configuration}\label{quantity-shape-and-configuration}}
+
+\begin{itemize}
+\item
+  radial centers around a central blob (i.e.~new centers along
+  transportation corridors extending from an original mono center a la
+  baltimore)?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    long and extended along transpo lines? (like I-270)
+  \item
+    round and compact in walkable dense nodes? (like bethesda)
+  \end{itemize}
+\item
+  distinct subnodes without an original center (a la LA?)
+\item
+  relationship between city size, population size, or econommy size and
+  number of centers?
+\end{itemize}
+
+\hypertarget{composition}{%
+\subsection{Composition}\label{composition}}
+
+\hypertarget{evolution-over-time}{%
+\subsection{Evolution over time ???}\label{evolution-over-time}}
+
+(this would be really cool but would extend the scope a lot)
+
+\hypertarget{discussion-policy-implications}{%
+\section{Discussion \& Policy
+Implications}\label{discussion-policy-implications}}
+
+\hypertarget{conclusion}{%
+\section{Conclusion}\label{conclusion}}
+
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
+
+\hypertarget{refs}{}
+\begin{cslreferences}
+\leavevmode\hypertarget{ref-duque_max-p-regions_2012}{}%
+Duque, Juan C., Luc Anselin, and Sergio J. Rey. 2012. ``The
+max-p-regions problem.'' \emph{Journal of Regional Science} 53 (3):
+397--419. \url{https://doi.org/10.1111/j.1467-9787.2011.00743.x}.
+
+\leavevmode\hypertarget{ref-Duque2017}{}%
+Duque, Juan Carlos, Mario C. Vélez-Gallego, and Laura Catalina
+Echeverri. 2018. ``On the Performance of the Subtour Elimination
+Constraints Approach for the p -Regions Problem: A Computational
+Study.'' \emph{Geographical Analysis} 50 (1): 32--52.
+\url{https://doi.org/10.1111/gean.12132}.
+
+\leavevmode\hypertarget{ref-Duque2011a}{}%
+Duque, Juan C., Richard L. Church, and Richard S. Middleton. 2011. ``The
+p-Regions Problem.'' \emph{Geographical Analysis} 43 (1): 104--26.
+\url{https://doi.org/10.1111/j.1538-4632.2010.00810.x}.
+
+\leavevmode\hypertarget{ref-Giuliano1991}{}%
+Giuliano, Genevieve, and Kenneth A Small. 1991. ``Subcenters in the Los
+Angeles region.'' \emph{Regional Science and Urban Economics} 21 (2):
+163--82. \url{https://doi.org/10.1016/0166-0462(91)90032-I}.
+
+\leavevmode\hypertarget{ref-Knaap2016}{}%
+Knaap, Elijah, Chengri Ding, Yi Niu, and Sabyasachee Mishra. 2016.
+``Polycentrism as a sustainable development strategy: empirical analysis
+from the state of Maryland.'' \emph{Journal of Urbanism: International
+Research on Placemaking and Urban Sustainability} 9 (1): 73--92.
+\url{https://doi.org/10.1080/17549175.2015.1029509}.
+
+\leavevmode\hypertarget{ref-Li2014}{}%
+Li, Wenwen, Richard L. Church, and Michael F. Goodchild. 2014. ``An
+extendable heuristic framework to solve the p-compact-regions problem
+for urban economic modeling.'' \emph{Computers, Environment and Urban
+Systems} 43 (January): 1--13.
+\url{https://doi.org/10.1016/j.compenvurbsys.2013.10.002}.
+
+\leavevmode\hypertarget{ref-Muth1969}{}%
+Muth, Richard F. 1969. ``Cities and housing; the spatial pattern of
+urban residential land use.'' \emph{American Journal of Agricultural
+Economics} 91 (1): 19--41.
+\url{http://trid.trb.org/view.aspx?id=545388}.
+
+\leavevmode\hypertarget{ref-She2017}{}%
+She, Bing, Juan C. Duque, and Xinyue Ye. 2017. ``The
+Network-Max-P-Regions model.'' \emph{International Journal of
+Geographical Information Science} 31 (5): 962--81.
+\url{https://doi.org/10.1080/13658816.2016.1252987}.
+\end{cslreferences}
+
+
+\end{document}
