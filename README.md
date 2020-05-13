@@ -6,6 +6,6 @@ A paper focused on computational techniques for identifying regional employment 
 
 1. clone this repository
 2. run `make environment` to build the conda environment with necessary dependencies
-   - run `conda activate pbpl` each time you work on the project
+   - run `conda activate pbpl204` each time you work on the project
    - run `make environment-update` to rebuild the conda environment if you add new dependencies or they change upstream
 
