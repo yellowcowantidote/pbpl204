@@ -4,8 +4,8 @@ SHELL=/bin/bash
 # GLOBALS                                                                       #
 #################################################################################
 
-PROJECT_NAME = maxp_emp
-CONDA_ENVIRONMENT = maxp_emp
+PROJECT_NAME = pbpl204
+CONDA_ENVIRONMENT = pbpl204
 PYTHON_VERSION = 3
 
 SRC = paper/draft.md
@@ -28,7 +28,7 @@ environment-update:
 	conda env update --name $(PROJECT_NAME) --file environment.yml
 
 ## Install notebook kernel manually
-kernel: 
+kernel:
 	@source "$(CONDA_BASE)/bin/activate" $(PROJECT_NAME);\
 	python -m ipykernel install --name $(PROJECT_NAME) --user
 
@@ -45,12 +45,12 @@ html:
 	pandoc $(SRC) -r markdown+simple_tables+table_captions+yaml_metadata_block+smart --self-contained -w html --resource-path=.:$(PWD) --template=paper/.pandoc/html.template --katex --css=paper/.pandoc/marked/kultiad-serif.css --filter pandoc-include --filter pandoc-crossref --filter pandoc-latex-admonition --filter pandoc-citeproc -o paper/compiled/$(PROJECT_NAME).html;
 
 ## Build latex doc from the current draft
-tex: 
+tex:
 	@source "$(CONDA_BASE)/bin/activate" $(PROJECT_NAME);\
 	pandoc $(SRC) -r markdown+simple_tables+table_captions+yaml_metadata_block+smart -w latex -s --pdf-engine=tectonic --template=paper/.pandoc/xelatex.template --filter pandoc-include --filter pandoc-crossref --filter pandoc-latex-admonition --filter pandoc-citeproc -o paper/compiled/$(PROJECT_NAME).tex;
 
 ## Build pdf from current draft
-pdf: 
+pdf:
 	@source "$(CONDA_BASE)/bin/activate" $(PROJECT_NAME);\
 	pandoc paper/appendix.md --filter pandoc-include --filter pandoc-crossref --filter pandoc-latex-admonition --filter pandoc-citeproc -o paper/compiled/appendix.tex;\
 	pandoc $(SRC) -r markdown+simple_tables+table_captions+yaml_metadata_block+smart -s --pdf-engine=tectonic --template=paper/.pandoc/xelatex.template --filter pandoc-include --filter pandoc-crossref --filter pandoc-latex-admonition --filter pandoc-citeproc  --include-after-body paper/compiled/appendix.tex -o paper/compiled/$(PROJECT_NAME).pdf;
@@ -60,13 +60,13 @@ clean:
 	rm -f paper/compiled/*.html paper/compiled/*.pdf paper/compiled/*.tex;
 
 ## Run notebooks
-notebooks: 
+notebooks:
 	@source "$(CONDA_BASE)/bin/activate" $(PROJECT_NAME);\
 	jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=-1 --ExecutePreprocessor.kernel_name=$(PROJECT_NAME) notebooks/*.ipynb;
 
 ## Run any necessary scripts
 scripts:
-	# python example.py 
+	# python example.py
 
 ## Run latex diff on current and previous drafts
 diff:
@@ -86,7 +86,7 @@ response:
 	pandoc paper/review_response.md --filter pandoc-include --filter pandoc-crossref --filter pandoc-latex-admonition --filter pandoc-citeproc  -o paper/compiled/review_response.pdf
 
 ## Build paper and tag as submitted version
-submission: 
+submission:
 	@source "$(CONDA_BASE)/bin/activate" $(PROJECT_NAME);\
 	@echo "Enter submission version number (e.g. v1, v2, v3): "; \
 	read -r VNO; \

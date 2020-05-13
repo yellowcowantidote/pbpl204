@@ -1,4 +1,4 @@
-name: maxp_emp
+name: pbpl204
 channels:
   - conda-forge
   - defaults
@@ -14,7 +14,7 @@ dependencies:
   - pysal >=2.2
   - descartes
   - pandana
-  - geosnap >=0.1.6
+  - geosnap >=0.3
   - momepy
   - osmnx
   - pygeos
