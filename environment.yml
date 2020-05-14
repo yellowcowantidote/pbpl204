@@ -18,6 +18,7 @@ dependencies:
   - momepy
   - osmnx
   - pygeos
+  - segregation
   - pip
   - pip:
     - pandoc-include                 # necessary to compile the paper
