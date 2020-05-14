@@ -10,5 +10,3 @@ statistics to characterize each center.
 1. clone this repository
 2. run `conda env create -f environment.yml` to build the conda environment with necessary dependencies
    - run `conda activate pbpl204` each time you work on the project
-   - run `make environment-update` to rebuild the conda environment if you add new dependencies or they change upstream
-
