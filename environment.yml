@@ -15,9 +15,6 @@ dependencies:
   - descartes
   - pandana
   - geosnap >=0.3
-  - momepy
-  - osmnx
-  - pygeos
   - segregation
   - pip
   - pip:
