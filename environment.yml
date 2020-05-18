@@ -10,7 +10,7 @@ dependencies:
   - numba==0.48
   - geopandas >=0.7
   - pandas >=1
-  - scikit-learn
+  - scikit-learn=0.22
   - scipy
   - pysal >=2.2
   - descartes
