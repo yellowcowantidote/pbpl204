@@ -17,6 +17,9 @@ dependencies:
   - pandana
   - geosnap >=0.3
   - segregation
+  - contextily
+  - hvplot
+  - geoviews
   - pip
   - pip:
     - pandoc-include                 # necessary to compile the paper
