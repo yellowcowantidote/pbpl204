@@ -127,17 +127,11 @@ def calc_lq(dataframe):
     for items in range(len(sex_list)):
         dataframe['LQ_' + sex_list[items]] = SexLQIndex.statistics[:,items]
 
-def graph_codes(dataframe,code,cmap='OrRd',k=5,scheme='fisherjenkssampled'):
-    """A function that takes the dataframe, LEHD code(string), cmap(string), and k(int) as arguements. Graphs both the original
-    and the LQ of the code with arguements specified. Only necessary arguments are dataframe and code. """
-    #Create a cmap that's more appropriate for displaying LQ
-        
-    #start graphing
-    fig, axs = matplotlib.pyplot.subplots(1,2, figsize=(20,10))
-    axs[0].set_title(code)
-    axs[1].set_title('LQ_'+ code)
-    return dataframe.plot(column= code, cmap=cmap, k=k, scheme=scheme, figsize = (10,10), legend=True, ax=axs[0]), dataframe.plot(column= 'LQ_' + code, cmap=lqmap, k=k, scheme=scheme, figsize = (10,10), legend=True, ax=axs[1])
-
+def graph_codes(dataframe,code):
+    """A function that takes the dataframe, NAICS code(string). Graphs both the original
+    and the LQ of the code using hvplot. Only necessary arguments are dataframe and code. """
+    
+    return dataframe.hvplot(c= code, tiles='OSM', title= code, alpha=0.6) + dataframe.hvplot(c= 'LQ_' + code, tiles='OSM', title= 'LQ_' + code, alpha=0.6)
 
 # %%
 
