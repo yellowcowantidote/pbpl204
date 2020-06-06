@@ -42,7 +42,7 @@ According to `sd_center['total_employees'].sum()` these centers contain a total 
 
 ### Riverside
 
-We find roughly 7 employment centers in Riverside. It should be noted that our methods identify 9 separate employment centers in Riverside, but we can assume that some of them are apaer of the same center due to their proximiy.
+We find roughly 7 employment centers in Riverside. It should be noted that our methods identify 9 separate employment centers in Riverside, but we can assume that some of them are apart of the same center due to their proximity.
 1. Downtown San Bernadino
 2. Downtown Riverside
 3. A portion of western Riverside
