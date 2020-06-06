@@ -16,13 +16,13 @@ The notebooks do the following and should be executed in this sequence:
 1. `center_smoother_rv_revised.ipynb` and `center_smoother_sd_revised.ipynb`
    These notebooks identify the employment centers in the San Diego and Riverside metropolitan areas at the tract level. They write out the data to GeoJSON files that are placed in the data folder.
 
-2. `SDCounty.ipynb` and `RVCounty.ipynb`
+2. `SDCounty.ipynb` and `RIVCounty.ipynb`
    
    These notebooks utilize the GeoJSON files created in the last step to generate interactive visualizations displaying total employment of each center as well as the ability to create visualizations of each NAICS code with its corresponding Location Quotient from the `pf.graph_codes` function.
 
 ## Results:
 
-After running all the notebooks, we're left with a set of polygons that define regional employment centers in both Riverside and San Diego. As previously stated, RVCounty.ipynb and SDCounty.ipynb have interactive maps displaying these centers and the ability to display by NAICS code.
+After running all the notebooks, we're left with a set of polygons that define regional employment centers in both Riverside and San Diego. As previously stated, `RIVCounty.ipynb` and `SDCounty.ipynb` have interactive maps displaying these centers and the ability to display by NAICS code.
 
 ### San Diego
 
@@ -35,6 +35,7 @@ We find roughly 8 employment centers in San Diego. It should be noted that our m
 6. Much of the City of El Cajon
 7. Much of the City of Poway
 8. The western portion of San Marcos
+
 Taking a closer look at these centers, it seems that many of them contain shopping malls or other high profile destinations for retail. Many of them also contain universities, hospitals, and large office parks. As employment centers seem to be dependent on zoning, it would be interesting to see how the these centers changed over time in context with zoning changes.
 
 According to `sd_center['total_employees'].sum()` these centers contain a total of **422,216** employees.
@@ -49,6 +50,7 @@ We find roughly 7 employment centers in Riverside. It should be noted that our m
 5. Downtown Corona
 6. Chino
 7. A portion of western Upland
+
 In this region, it seems that many of the employment centers are located in areas with high amounts of Transportation and Warehousing, or in the downtown centers with large amounts of government administration.
 
 According to `rv_center['total_employees'].sum()`  these centers contain a total of **313,403** employees.
