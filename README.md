@@ -57,6 +57,5 @@ According to `rv_center['total_employees'].sum()`  these centers contain a total
 
 ## Next Steps
 
-1. first
-2. second
-3. third
+1. Analyze employment centers over time in context with transportation improvements and zoning changes in the region.
+2. Analyze change in employment share within these centers over time.
